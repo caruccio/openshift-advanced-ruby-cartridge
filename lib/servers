@@ -23,8 +23,10 @@ function gem_exists() {
 function run_command() {
 	if is_bundler_used
 	then
+	    echo "gemfile exists"
 		ruby_context 'bundle exec "'"$1"'"'
 	else
+	    echo "gemfile not exists
 		ruby_context "$1"
 	fi
 
