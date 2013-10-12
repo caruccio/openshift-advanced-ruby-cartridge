@@ -10,6 +10,12 @@ then
   OPENSHIFT_RUBY_SERVER=passenger #by default
 fi
 
+function ruby-implementation() {
+    OPENSHIFT_RUBY_IMPLEMENTATION=default
+    OPENSHIFT_RUBY_IMPLEMENTATION=jruby
+
+}
+
 
 function start() {
     echo "Starting Ruby cartridge using ${OPENSHIFT_RUBY_SERVER} webserver."
